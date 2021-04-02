@@ -18,13 +18,16 @@
         {% endblock %}
     </head>
     <body>
+    <div class="container" style="text-align: center">
         {% block body %}
         {% endblock %}
+    </div>
+
     </body>
     <footer>
         {% block footer %}
             <nav class="navbar navbar-dark bg-dark" style="position: fixed; bottom: 0;width: 100%;display: flex;flex-direction: row;justify-content: space-around">
-                <a class="navbar-brand" href="{{ path("history") }}" style"background-color: #aeaeae">Historique</a>
+                <a class="navbar-brand" href="{{ path("history") }}">Historique</a>
 
                 <a class="navbar-brand" href="{{ path("home") }}" >Accueil</a>
                 <a class="navbar-brand" href="{{ path("picture") }}" >Photo</a>
