@@ -14,7 +14,7 @@ class ClientType extends AbstractType
     {
         $builder
             ->add('email')
-            ->add('password',PasswordType::class)
+            ->add('plainPassword',PasswordType::class)
             ->add('nom')
             ->add('prenom')
             ->add('tel')

@@ -13,6 +13,10 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 /**
  * @Route("/client")
  */
+
+/**
+ * @IsGranted("ROLE_ADMIN")
+ */
 class ClientController extends AbstractController
 {
     /**
