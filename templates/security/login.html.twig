@@ -3,7 +3,7 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-<form method="post">
+<form method="post" xmlns="http://www.w3.org/1999/html">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -36,7 +36,13 @@
     #}
 
     <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
+        Se connecter
+    </button>
+    </br>
+    </br>
+    <button class="btn btn-lg btn-primary" type="submit">
+        <a href="{{ path('client_new') }}" style="color: white ; text-underline: none ;">Créer un compte</a>
+
     </button>
 </form>
 {% endblock %}

@@ -3,9 +3,11 @@
 namespace App\Form;
 
 use App\Entity\Client;
+use Doctrine\DBAL\Types\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormTypeInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ClientType extends AbstractType
@@ -14,7 +16,7 @@ class ClientType extends AbstractType
     {
         $builder
             ->add('email')
-            ->add('plainPassword',PasswordType::class)
+            ->add('plainPassword',PasswordType::class, ['label' => 'Mot de passe'])
             ->add('nom')
             ->add('prenom')
             ->add('tel')
