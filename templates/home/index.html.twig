@@ -9,16 +9,25 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Bonjour (nom du client)</h1>
+    <h1>Bonjour {{ myclient.getNom }}</h1>
     <br>
     <br>
 
     <button class="btn btn-lg btn-primary">Réservation</button>
     <br>
     <br>
-    <button class="btn btn-lg btn-primary">Compte</button>
+    <button class="btn btn-lg btn-primary">
+        <a href="{{ path('home') }}" style="color: white ; text-decoration: none;">
+            Compte
+        </a>
+    </button>
     <br>
     <br>
-    <button class="btn btn-lg btn-primary">Déconnexion</button>
+    <button class="btn btn-lg btn-primary">
+        <a href="{{ path('app_logout') }}" style="color: white ; text-decoration: none;">
+            Déconnexion
+        </a>
+
+    </button>
 </div>
 {% endblock %}

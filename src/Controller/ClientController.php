@@ -20,6 +20,7 @@ class ClientController extends AbstractController
 {
     /**
      * @Route("/", name="client_index", methods={"GET"})
+     * @IsGranted("ROLE_ADMIN",statusCode=404, message="You are not Admin")
      */
     public function index(ClientRepository $clientRepository): Response
     {
@@ -60,7 +61,9 @@ class ClientController extends AbstractController
 
     /**
      * @Route("/{id}", name="client_show", methods={"GET"})
+     * @IsGranted("ROLE_ADMIN")
      */
+
     public function show(Client $client): Response
     {
         return $this->render('client/show.html.twig', [
@@ -70,6 +73,7 @@ class ClientController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="client_edit", methods={"GET","POST"})
+     * @IsGranted("ROLE_USER")
      */
     public function edit(Request $request, Client $client): Response
     {
@@ -90,6 +94,7 @@ class ClientController extends AbstractController
 
     /**
      * @Route("/{id}", name="client_delete", methods={"POST"})
+     * @IsGranted("ROLE_ADMIN")
      */
     public function delete(Request $request, Client $client): Response
     {
