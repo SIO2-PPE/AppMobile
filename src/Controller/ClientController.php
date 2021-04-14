@@ -50,7 +50,7 @@ class ClientController extends AbstractController
             $entityManager->persist($client);
             $entityManager->flush();
 
-            return $this->redirectToRoute('client_index');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('client/new.html.twig', [
@@ -60,34 +60,34 @@ class ClientController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="client_show", methods={"GET"})
+     * @Route("/{id}", name="client_show", methods={"GET"}, requirements={"id":"\d+"})
      * @IsGranted("ROLE_ADMIN")
      */
-
+/*
     public function show(Client $client): Response
     {
         return $this->render('client/show.html.twig', [
             'client' => $client,
         ]);
-    }
+    }*/
 
     /**
-     * @Route("/{id}/edit", name="client_edit", methods={"GET","POST"})
+     * @Route("/account", name="client_edit", methods={"GET","POST"})
      * @IsGranted("ROLE_USER")
      */
-    public function edit(Request $request, Client $client): Response
+    public function edit(Request $request): Response
     {
-        $form = $this->createForm(ClientType::class, $client);
+        $form = $this->createForm(ClientType::class, $this->getUser());
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('client_index');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('client/edit.html.twig', [
-            'client' => $client,
+            'client' => $this->getUser(),
             'form' => $form->createView(),
         ]);
     }
