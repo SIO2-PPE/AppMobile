@@ -79,6 +79,6 @@ class Horraire
     }
     public function __toString()
     {
-        return $this->getId()." ";
+        return $this->getHeure()->format('h:m');
     }
 }

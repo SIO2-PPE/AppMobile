@@ -209,7 +209,7 @@ class Client implements UserInterface
     {
         if (!$this->parties->contains($party)) {
             $this->parties[] = $party;
-            $party->setIdclient($this);
+            $party->setClient($this);
         }
 
         return $this;
@@ -219,8 +219,8 @@ class Client implements UserInterface
     {
         if ($this->parties->removeElement($party)) {
             // set the owning side to null (unless already changed)
-            if ($party->getIdclient() === $this) {
-                $party->setIdclient(null);
+            if ($party->getClient() === $this) {
+                $party->setClient(null);
             }
         }
 

@@ -26,19 +26,19 @@ class Partie
      * @ORM\ManyToOne(targetEntity=Client::class, inversedBy="parties")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $idclient;
+    private $client;
 
     /**
      * @ORM\ManyToOne(targetEntity=Horraire::class)
      * @ORM\JoinColumn(nullable=false)
      */
-    private $ihorraire;
+    private $horraire;
 
     /**
      * @ORM\ManyToOne(targetEntity=Salle::class)
      * @ORM\JoinColumn(nullable=false)
      */
-    private $idsalle;
+    private $salle;
 
     public function getId(): ?int
     {
@@ -57,38 +57,38 @@ class Partie
         return $this;
     }
 
-    public function getIdclient(): ?Client
+    public function getClient(): ?Client
     {
-        return $this->idclient;
+        return $this->client;
     }
 
-    public function setIdclient(?Client $idclient): self
+    public function setClient(?Client $client): self
     {
-        $this->idclient = $idclient;
+        $this->client = $client;
 
         return $this;
     }
 
-    public function getIhorraire(): ?Horraire
+    public function getHorraire(): ?Horraire
     {
-        return $this->ihorraire;
+        return $this->horraire;
     }
 
-    public function setIhorraire(?Horraire $ihorraire): self
+    public function setHorraire(?Horraire $horraire): self
     {
-        $this->ihorraire = $ihorraire;
+        $this->horraire = $horraire;
 
         return $this;
     }
 
-    public function getIdsalle(): ?Salle
+    public function getSalle(): ?Salle
     {
-        return $this->idsalle;
+        return $this->salle;
     }
 
-    public function setIdsalle(?Salle $idsalle): self
+    public function setSalle(?Salle $salle): self
     {
-        $this->idsalle = $idsalle;
+        $this->salle = $salle;
 
         return $this;
     }

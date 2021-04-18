@@ -41,7 +41,7 @@ class Salle
     }
     public function __toString()
     {
-        return $this->getIdsite()->getVille()." salle ".$this->getId();
+        return $this->getIdsite()->getVille()." - Salle : ".$this->getId();
         // TODO: Implement __toString() method.
     }
 }
