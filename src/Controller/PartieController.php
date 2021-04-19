@@ -34,6 +34,7 @@ class PartieController extends AbstractController
      */
     public function new(Request $request): Response
     {
+        $myclient = $this->getUser();
         $partie = new Partie();
         $form = $this->createForm(PartieType::class, $partie);
         $form->handleRequest($request);
@@ -49,6 +50,7 @@ class PartieController extends AbstractController
         return $this->render('partie/new.html.twig', [
             'partie' => $partie,
             'form' => $form->createView(),
+            'myclient' => $myclient,
         ]);
     }
 

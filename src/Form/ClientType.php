@@ -19,7 +19,7 @@ class ClientType extends AbstractType
             ->add('email')
             ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
-                'invalid_message' => 'Les mots de passes doivent être identique',
+                'invalid_message' => 'Les mots de passes doivent être identiques',
                 'options' => ['attr' => ['class' => 'password-field']],
                 'required' => true,
                 'first_options'  => ['label' => 'mot de passe'],

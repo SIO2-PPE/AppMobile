@@ -11,6 +11,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 
+
 /**
  * @ORM\Entity(repositoryClass=ClientRepository::class)
  */
