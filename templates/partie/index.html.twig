@@ -10,6 +10,9 @@
             <tr>
                 <th>Id</th>
                 <th>Date</th>
+                <th>Client</th>
+                <th>Horraire</th>
+                <th>Salle</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -18,6 +21,9 @@
             <tr>
                 <td>{{ partie.id }}</td>
                 <td>{{ partie.date ? partie.date|date('Y-m-d') : '' }}</td>
+                <td>{{ partie.client }}</td>
+                <td>{{ partie.horraire }}</td>
+                <td>{{ partie.salle }}</td>
                 <td>
                     <a href="{{ path('partie_show', {'id': partie.id}) }}">show</a>
                     <a href="{{ path('partie_edit', {'id': partie.id}) }}">edit</a>
