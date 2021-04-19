@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Client;
+use App\Entity\Partie;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,8 +21,12 @@ class HistoryController extends AbstractController
      */
     public function index(): Response
     {
+        $myclient = $this->getUser();
+        $history = array($myclient->getParties());
         return $this->render('history/index.html.twig', [
             'controller_name' => 'HistoryController',
+            'historys' => $history,
+
         ]);
     }
 }

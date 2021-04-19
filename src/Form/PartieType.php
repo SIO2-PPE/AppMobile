@@ -17,7 +17,6 @@ class PartieType extends AbstractType
     {
         $builder
             ->add('date')
-            ->add('client')
             ->add('horraire')
             ->add('salle')
         ;

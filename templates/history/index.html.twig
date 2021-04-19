@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HistoryController!{% endblock %}
+{% block title %}Historique{% endblock %}
 
 {% block body %}
 <style>
@@ -9,12 +9,34 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Historique</h1>
+    {% for h in historys %}
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ h.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ client.email }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ client.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ client.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Tel</th>
+                <td>{{ client.tel }}</td>
+            </tr>
+            </tbody>
+        </table>
+    {% endfor %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'D:/Dimitri DEFRESNE/AppMobile/src/Controller/HistoryController.php'|file_link(0) }}">src/Controller/HistoryController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'D:/Dimitri DEFRESNE/AppMobile/templates/history/index.html.twig'|file_link(0) }}">templates/history/index.html.twig</a></code></li>
-    </ul>
+
 </div>
 {% endblock %}
