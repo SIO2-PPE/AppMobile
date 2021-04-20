@@ -22,6 +22,7 @@ class HomeController extends AbstractController
     {
         $myclient = $this->getUser();
 
+
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'myclient' => $myclient,
