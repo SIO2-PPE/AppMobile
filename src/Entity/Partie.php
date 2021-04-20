@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PartieRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -39,6 +41,16 @@ class Partie
      * @ORM\JoinColumn(nullable=false)
      */
     private $salle;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Joueur::class, mappedBy="partie")
+     */
+    private $joueurs;
+
+    public function __construct()
+    {
+        $this->joueurs = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -89,6 +101,33 @@ class Partie
     public function setSalle(?Salle $salle): self
     {
         $this->salle = $salle;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Joueur[]
+     */
+    public function getJoueurs(): Collection
+    {
+        return $this->joueurs;
+    }
+
+    public function addJoueur(Joueur $joueur): self
+    {
+        if (!$this->joueurs->contains($joueur)) {
+            $this->joueurs[] = $joueur;
+            $joueur->addPartie($this);
+        }
+
+        return $this;
+    }
+
+    public function removeJoueur(Joueur $joueur): self
+    {
+        if ($this->joueurs->removeElement($joueur)) {
+            $joueur->removePartie($this);
+        }
 
         return $this;
     }

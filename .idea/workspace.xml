@@ -32,11 +32,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d095955b-8692-4651-aa7f-cb0a13ccbe8e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HistoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HistoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Horraire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Horraire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PartieRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PartieRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/history/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/history/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Partie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Partie.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +172,7 @@
       <workItem from="1618665726255" duration="1796000" />
       <workItem from="1618750713368" duration="2300000" />
       <workItem from="1618823368538" duration="11079000" />
-      <workItem from="1618909477854" duration="4952000" />
+      <workItem from="1618909477854" duration="5551000" />
     </task>
     <servers />
   </component>
