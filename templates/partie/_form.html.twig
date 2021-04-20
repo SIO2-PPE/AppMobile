@@ -1,4 +1,10 @@
 {{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <br>
+    <br>
+    <button class="btn btn-lg btn-primary">{{ button_label|default() }}
+    <a href="{{ path('home') }}" style="color: white ; text-decoration: none;">
+        Continuer
+    </a>
+    </button>
 {{ form_end(form) }}

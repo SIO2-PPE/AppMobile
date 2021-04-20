@@ -3,9 +3,9 @@
 {% block title %}New Joueur{% endblock %}
 
 {% block body %}
-    <h1>Create new Joueur</h1>
+    <h1>Les joueurs</h1>
 
     {{ include('joueur/_form.html.twig') }}
 
-    <a href="{{ path('joueur_index') }}">back to list</a>
+    <a href="{{ path('partie_new') }}">Précédent</a>
 {% endblock %}

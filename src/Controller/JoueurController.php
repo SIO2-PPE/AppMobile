@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Joueur;
+use App\Entity\Partie;
 use App\Form\JoueurType;
 use App\Repository\JoueurRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -28,9 +29,10 @@ class JoueurController extends AbstractController
     /**
      * @Route("/new", name="joueur_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request,Partie $partie): Response
     {
         $joueur = new Joueur();
+        $joueur->addPartie($partie->getId());
         $form = $this->createForm(JoueurType::class, $joueur);
         $form->handleRequest($request);
 

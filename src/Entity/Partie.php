@@ -131,4 +131,9 @@ class Partie
 
         return $this;
     }
+    public function __toString()
+    {
+        return $this->getId()."";
+        // TODO: Implement __toString() method.
+    }
 }

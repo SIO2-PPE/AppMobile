@@ -5,8 +5,16 @@
 {% block body %}
     <h1>Réservation d'une partie</h1>
 
-    {{ include('partie/_form.html.twig') }}
-    
 
-    <a href="{{ path('home') }}">Accueil</a>
+    {{ include('partie/_form.html.twig') }}
+
+    <br>
+    <br>
+
+    <button class="btn btn-lg btn-primary">{{ button_label|default() }}
+        <a href="{{ path('joueur_new') }}" style="color: white ; text-decoration: none;">Accueil</a>
+    </button>
+
+
+
 {% endblock %}

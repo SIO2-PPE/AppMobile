@@ -19,20 +19,7 @@ class PartieRepository extends ServiceEntityRepository
         parent::__construct($registry, Partie::class);
     }
 
-     /**
-      * @return Partie[] Returns an array of Partie objects
-     */
 
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('*')
-            ->andWhere('client_id= '.$value)
-
-            ->orderBy('date', 'ASC')
-            ->getQuery()
-            ->getResult()
-        ;
-    }
 
 
     /*
