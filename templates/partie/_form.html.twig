@@ -1,4 +1,4 @@
-{{ form_start(form) }}
+{# {{ form_start(form) }}
     {{ form_widget(form) }}
     <br>
     <br>
@@ -7,4 +7,94 @@
         Continuer
     </a>
     </button>
+{{ form_end(form) }} #}
+
+{{ form_start(form) }}
+
+{{ form_row(form.date) }}
+{{ form_row(form.horraire) }}
+{{ form_row(form.salle) }}
+
+
+{# store the prototype on the data-prototype attribute #}
+<ul id="joueur-fields-list" 
+    data-prototype="{{ form_widget(form.joueurs.vars.prototype)|e }}" 
+    data-widget-tags="{{ '<li></li>'|e }}" 
+    data-widget-counter="{{ form.joueurs|length }}"> 
+    {% for joueurField in form.joueurs %}
+		<li>
+			{{ form_errors(joueurField) }}
+			{{ form_widget(joueurField) }}
+		</li>
+	{% endfor %}
+</ul>
+
+<button type="button" class="add-another-collection-widget" data-list-selector="#joueur-fields-list">Ajouter un joueur</button>
+
+{# ... #}
 {{ form_end(form) }}
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+jQuery(document).ready(function () {
+
+    jQuery('.add-another-collection-widget').click(function (e) {
+
+        var list = jQuery(jQuery(this).attr('data-list-selector'));
+        // Try to find the counter of the list or use the length of the list
+        var counter = list.data('widget-counter') || list.children().length;
+
+        // grab the prototype template
+        var newWidget = list.attr('data-prototype');
+        // replace the "__name__" used in the id and name of the prototype
+        // with a number that's unique to your emails
+        // end name attribute looks like name="contact[emails][2]"
+        newWidget = newWidget.replace(/__name__/g, counter);
+
+        // var $removeFormButton = $('<button type="button">Supprimer</button>');
+	
+	    // $removeFormButton.on('click', function(e) {
+	        // remove the li for the tag form
+	        // $tagFormLi.remove();
+	    // });
+
+        var rmButton = document.createElement('div');
+        rmButton.innerHTML = '<button type="button">Supprimer</button>';
+        rmButton.on('click', function(e) {
+            newWidget.remove();
+        });
+
+        newWidget.appendChild(rmButton)
+
+
+        // Increase the counter
+        counter++;
+        // And store it, the length cannot be used if deleting widgets is allowed
+        list.data('widget-counter', counter);
+
+        // create a new list element and add it to the list
+        var newElem = jQuery(list.attr('data-widget-tags')).html(newWidget);
+        newElem.appendTo(list);
+    });
+});
+
+
+{# function addFormToCollection() {
+    // ...
+
+    // add a delete link to the new form
+    addTagFormDeleteLink($newFormLi);
+}
+
+function addTagFormDeleteLink($tagFormLi) {
+    var $removeFormButton = $('<button type="button">Supprimer</button>');
+    $tagFormLi.append($removeFormButton);
+
+    $removeFormButton.on('click', function(e) {
+        // remove the li for the tag form
+        $tagFormLi.remove();
+    });
+} #}
+</script>

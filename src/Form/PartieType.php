@@ -6,11 +6,13 @@ use App\Entity\Client;
 use App\Entity\Joueur;
 use App\Entity\Partie;
 use App\Entity\Horraire;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use App\Form\JoueurType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\FormTypeInterface;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 
 class PartieType extends AbstractType
 {
@@ -20,7 +22,11 @@ class PartieType extends AbstractType
             ->add('date')
             ->add('horraire')
             ->add('salle')
-            
+            ->add('joueurs', CollectionType::class, [
+                'entry_type' => JoueurType::class,
+                'allow_add' => true,
+                'allow_delete' => true,
+            ])
         ;
     }
 
