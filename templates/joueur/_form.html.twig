@@ -1,4 +1,9 @@
 {{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <br>
+    <button class="btn btn-lg btn-primary">{{ button_label|default() }}
+        <a href="{{ path('joueur_new') }}" style="color: white ; text-decoration: none;" >
+            Réserver !
+        </a>
+    </button>
 {{ form_end(form) }}

@@ -14,6 +14,7 @@ class JoueurType extends AbstractType
         $builder
             ->add('nom')
             ->add('prenom')
+
         ;
     }
 

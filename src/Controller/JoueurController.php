@@ -29,10 +29,11 @@ class JoueurController extends AbstractController
     /**
      * @Route("/new", name="joueur_new", methods={"GET","POST"})
      */
-    public function new(Request $request,Partie $partie): Response
+    public function new(Request $request): Response
     {
+        $partie = new Partie();
         $joueur = new Joueur();
-        $joueur->addPartie($partie->getId());
+        $joueur->addPartie($partie);
         $form = $this->createForm(JoueurType::class, $joueur);
         $form->handleRequest($request);
 
@@ -93,4 +94,5 @@ class JoueurController extends AbstractController
 
         return $this->redirectToRoute('joueur_index');
     }
+
 }

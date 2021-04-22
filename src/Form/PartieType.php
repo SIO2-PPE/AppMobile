@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Client;
+use App\Entity\Joueur;
 use App\Entity\Partie;
 use App\Entity\Horraire;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -19,6 +20,7 @@ class PartieType extends AbstractType
             ->add('date')
             ->add('horraire')
             ->add('salle')
+            
         ;
     }
 

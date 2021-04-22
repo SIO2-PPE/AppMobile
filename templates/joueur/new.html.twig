@@ -4,8 +4,13 @@
 
 {% block body %}
     <h1>Les joueurs</h1>
+    <br>
 
     {{ include('joueur/_form.html.twig') }}
-
-    <a href="{{ path('partie_new') }}">Précédent</a>
+    <br>
+    <button class="btn btn-lg btn-primary">
+        <a href="{{ path('partie_new') }}" style="color: white ; text-decoration: none;">
+            Précédent
+        </a>
+    </button>
 {% endblock %}
