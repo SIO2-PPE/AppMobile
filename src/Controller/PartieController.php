@@ -45,7 +45,7 @@ class PartieController extends AbstractController
             $entityManager->persist($partie);
             $entityManager->flush();
 
-            return $this->redirectToRoute('joueur_new');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('partie/new.html.twig', [

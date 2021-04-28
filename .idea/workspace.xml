@@ -31,12 +31,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d095955b-8692-4651-aa7f-cb0a13ccbe8e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AppMobile.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AppMobile.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/JoueurType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/JoueurType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PartieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PartieController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/PartieType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PartieType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/joueur/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/joueur/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partie/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partie/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partie/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partie/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/cache" />
       <path value="$PROJECT_DIR$/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
       <path value="$PROJECT_DIR$/vendor/symfony/flex" />
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
@@ -90,7 +90,6 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
       <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
       <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
@@ -131,6 +130,8 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
     </include_path>
   </component>
   <component name="ProjectId" id="1qITKslBum1TPlF6UalAxSmqVux" />
@@ -183,6 +184,7 @@
       <workItem from="1619115408262" duration="84000" />
       <workItem from="1619444498967" duration="4882000" />
       <workItem from="1619590443279" duration="3179000" />
+      <workItem from="1619596222336" duration="5301000" />
     </task>
     <servers />
   </component>
@@ -223,5 +225,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="121" y="-22" width="1294" height="572" key="dock-window-2/0.0.1536.824/-1920.0.1280.680@0.0.1536.824" timestamp="1619088347587" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1619598375747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/-1920.0.1280.680@0.0.1536.824" timestamp="1619598375747" />
   </component>
 </project>
