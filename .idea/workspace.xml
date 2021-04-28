@@ -31,13 +31,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d095955b-8692-4651-aa7f-cb0a13ccbe8e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PartieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PartieController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/PartieType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PartieType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partie/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partie/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/partie/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partie/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,18 +1,18 @@
- {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <br>
-    <br>
-    <button class="btn btn-lg btn-primary">Continuer</button>
-{{ form_end(form) }}
 {#
+{{ form_start(form) }}
+   {{ form_widget(form) }}
+   <br>
+   <br>
+   <button class="btn btn-lg btn-primary">Continuer</button>
+{{ form_end(form) }}#}
 {{ form_start(form) }}
 
 {{ form_row(form.date) }}
 {{ form_row(form.horraire) }}
 {{ form_row(form.salle) }}
-#}
 
-{# store the prototype on the data-prototype attribute
+
+{# store the prototype on the data-prototype attribute #}
 <h4>Joueurs</h4>
 <ul id="joueur-fields-list" 
     data-prototype="{{ form_widget(form.joueurs.vars.prototype)|e }}" 
@@ -27,12 +27,12 @@
 </ul>
 
 <button type="button" class="add-another-collection-widget" data-list-selector="#joueur-fields-list">Ajouter un joueur</button>
-#}
+
 {# ... #}
 {{ form_end(form) }}
 
 
-{#
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script>
@@ -94,6 +94,7 @@ function addTagFormDeleteLink($tagFormLi) {
         // remove the li for the tag form
         $tagFormLi.remove();
     });
-}</script> #}
+}#}</script>
+<button class="btn btn-lg btn-primary">Continuer</button>
 
 

@@ -22,11 +22,11 @@ class PartieType extends AbstractType
             ->add('date')
             ->add('horraire')
             ->add('salle')
-            /*->add('joueurs', CollectionType::class, [
+            ->add('joueurs', CollectionType::class, [
                 'entry_type' => JoueurType::class,
                 'allow_add' => true,
                 'allow_delete' => true,
-            ])*/
+            ])
         ;
     }
 
