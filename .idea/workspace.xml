@@ -31,14 +31,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d095955b-8692-4651-aa7f-cb0a13ccbe8e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/AppMobile.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AppMobile.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/JoueurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/JoueurController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/JoueurType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/JoueurType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/PartieType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PartieType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/joueur/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/joueur/_form.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/joueur/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/joueur/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partie/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partie/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/partie/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partie/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +142,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last.edited.regexp" value="Sample Text" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -181,6 +180,9 @@
       <workItem from="1618909477854" duration="10110000" />
       <workItem from="1619004148141" duration="6737000" />
       <workItem from="1619088101067" duration="1088000" />
+      <workItem from="1619115408262" duration="84000" />
+      <workItem from="1619444498967" duration="4882000" />
+      <workItem from="1619590443279" duration="3179000" />
     </task>
     <servers />
   </component>

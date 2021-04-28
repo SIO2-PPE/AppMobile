@@ -7,6 +7,7 @@ use App\Entity\Joueur;
 use App\Entity\Partie;
 use App\Entity\Horraire;
 use App\Form\JoueurType;
+use Doctrine\DBAL\Types\DateType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormTypeInterface;
 use Symfony\Component\Form\FormBuilderInterface;
