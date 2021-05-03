@@ -37,6 +37,7 @@ class PartieController extends AbstractController
         $myclient = $this->getUser();
         $partie = new Partie();
         $partie->setClient($myclient);
+
         $form = $this->createForm(PartieType::class, $partie);
         $form->handleRequest($request);
 

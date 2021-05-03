@@ -8,6 +8,25 @@
 
     {{ include('partie/_form.html.twig') }}
 
+    {{ form_start(form) }}
+        {{ form_row(form.date) }}
+        {{ form_row(form.horraire) }}
+        {{ form_row(form.salle) }}
+
+    <h3>Joueurs</h3>
+    <ul class="tags" data-prototype="&lt;div&gt;&lt;label class=&quot; required&quot;&gt;
+    __name__&lt;/label&gt;&lt;div id=&quot;task_tags___name__&quot;&gt;&lt;div&gt;&lt;
+    label for=&quot;task_tags___name___name&quot; class=&quot; required&quot;&gt;Name&lt;
+    /label&gt;&lt;input type=&quot;text&quot; id=&quot;task_tags___name___name&quot; name=&quot;task[tags][__name__][name]&quot;
+     required=&quot;required&quot; maxlength=&quot;255&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;">
+
+    {% for joueur in form.joueurs %}
+            <li>{{ form_row(tag.name) }}</li>
+        {% endfor %}
+    </ul>
+
+    {{ form_end(form) }}
+
 
 
     <br>

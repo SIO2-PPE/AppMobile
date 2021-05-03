@@ -30,14 +30,9 @@ class Joueur
     private $prenom;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Partie::class, inversedBy="joueurs")
+     * @ORM\ManyToOne(targetEntity=Partie::class, inversedBy="joueurs")
      */
     private $partie;
-
-    public function __construct()
-    {
-        $this->partie = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -68,27 +63,17 @@ class Joueur
         return $this;
     }
 
-    /**
-     * @return Collection|Partie[]
-     */
-    public function getPartie(): Collection
+
+    public function getPartie(): ?Partie
     {
         return $this->partie;
     }
 
-    public function addPartie(Partie $partie): self
+    public function setPartie(?Partie $partie): self
     {
-        if (!$this->partie->contains($partie)) {
-            $this->partie[] = $partie;
-        }
+        $this->partie = $partie;
 
         return $this;
     }
 
-    public function removePartie(Partie $partie): self
-    {
-        $this->partie->removeElement($partie);
-
-        return $this;
-    }
 }

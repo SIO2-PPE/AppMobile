@@ -43,7 +43,7 @@ class Partie
     private $salle;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Joueur::class, mappedBy="partie")
+     * @ORM\OneToMany (targetEntity=Joueur::class, mappedBy="partie", cascade={"persist"})
      */
     private $joueurs;
 
@@ -117,7 +117,7 @@ class Partie
     {
         if (!$this->joueurs->contains($joueur)) {
             $this->joueurs[] = $joueur;
-            $joueur->addPartie($this);
+            $joueur->setPartie($this);
         }
 
         return $this;
@@ -125,11 +125,15 @@ class Partie
 
     public function removeJoueur(Joueur $joueur): self
     {
-        if ($this->joueurs->removeElement($joueur)) {
-            $joueur->removePartie($this);
-        }
+       if($this->joueurs->removeElement($joueur)) {
+           if($joueur->getPartie() === $this) {
+               $joueur->setPartie(null);
+           }
+       }
 
-        return $this;
+
+    return $this;
+
     }
     public function __toString()
     {

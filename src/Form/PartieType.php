@@ -16,7 +16,7 @@ use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 
 class PartieType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('date')
@@ -24,6 +24,7 @@ class PartieType extends AbstractType
             ->add('salle')
             ->add('joueurs', CollectionType::class, [
                 'entry_type' => JoueurType::class,
+                'entry_option' => ['label' => false],
                 'allow_add' => true,
                 'allow_delete' => true,
             ])
