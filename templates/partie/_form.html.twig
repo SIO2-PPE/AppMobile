@@ -1,19 +1,11 @@
 
 {{ form_start(form) }}
-   {{ form_widget(form) }}
-   <br>
-   <br>
-   <button class="btn btn-lg btn-primary">Continuer</button>
-{{ form_end(form) }}
-{#
-{{ form_start(form) }}
 
 {{ form_row(form.date) }}
 {{ form_row(form.horraire) }}
 {{ form_row(form.salle) }}
-#}
 
-{# store the prototype on the data-prototype attribute
+
 <h4>Joueurs</h4>
 <ul id="joueur-fields-list"
     data-prototype="{{ form_widget(form.joueurs.vars.prototype)|e }}"
@@ -29,6 +21,7 @@
 
 <button type="button" class="add-another-collection-widget" data-list-selector="#joueur-fields-list">Ajouter un joueur</button>
 
+<button type="submit" class="btn btn-primary">Réserver</button>
 
 {{ form_end(form) }}
 
@@ -70,6 +63,6 @@ jQuery(document).ready(function () {
 
 
 </script>
-#}
+
 
 

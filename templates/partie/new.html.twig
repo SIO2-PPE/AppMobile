@@ -4,18 +4,20 @@
 
 {% block body %}
     <h1>Réservation d'une partie</h1>
-{{ form_start(form) }}
 
     {{ include('partie/_form.html.twig') }}
+
+{#
+{{ form_start(form) }}
 
 
         {{ form_row(form.date) }}
         {{ form_row(form.horraire) }}
         {{ form_row(form.salle) }}
-    <button type="button" class="add_item_link" data-collection-holder-class="tags">ajouter un joueur/button>
+    <button type="button" class="add_item_link" data-collection-holder-class="tags">ajouter un joueur</button>
 
     <h3>Joueurs</h3>
-    <ul class="joueurs" data-prototype="{{ form_widget(form.tags.vars.prototype)|e('html_attr') }}">
+    <ul class="joueurs" data-prototype="{{ form_widget(form.joueurs.vars.prototype)|e('html_attr') }}">
 
     {% for joueur in form.joueurs %}
             <li>{{ form_row(joueur.name) }}</li>
@@ -29,8 +31,9 @@
 
     <br>
     <br>
-
+#}
     <a class="btn btn-lg btn-primary" href="{{ path('home') }}" >Accueil</a>
+
 
 
 
