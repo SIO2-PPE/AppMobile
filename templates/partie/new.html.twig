@@ -4,26 +4,24 @@
 
 {% block body %}
     <h1>Réservation d'une partie</h1>
-
+{{ form_start(form) }}
 
     {{ include('partie/_form.html.twig') }}
 
-    {{ form_start(form) }}
+
         {{ form_row(form.date) }}
         {{ form_row(form.horraire) }}
         {{ form_row(form.salle) }}
+    <button type="button" class="add_item_link" data-collection-holder-class="tags">ajouter un joueur/button>
 
     <h3>Joueurs</h3>
-    <ul class="tags" data-prototype="&lt;div&gt;&lt;label class=&quot; required&quot;&gt;
-    __name__&lt;/label&gt;&lt;div id=&quot;task_tags___name__&quot;&gt;&lt;div&gt;&lt;
-    label for=&quot;task_tags___name___name&quot; class=&quot; required&quot;&gt;Name&lt;
-    /label&gt;&lt;input type=&quot;text&quot; id=&quot;task_tags___name___name&quot; name=&quot;task[tags][__name__][name]&quot;
-     required=&quot;required&quot; maxlength=&quot;255&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;">
+    <ul class="joueurs" data-prototype="{{ form_widget(form.tags.vars.prototype)|e('html_attr') }}">
 
     {% for joueur in form.joueurs %}
-            <li>{{ form_row(tag.name) }}</li>
+            <li>{{ form_row(joueur.name) }}</li>
         {% endfor %}
     </ul>
+
 
     {{ form_end(form) }}
 
