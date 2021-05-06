@@ -42,13 +42,18 @@ class PartieController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            foreach ($form->getData()->getJoueurs() as $joueur)
+
+            if (count($form->getData()->getJoueurs()) > 1 && count($form->getData()->getJoueurs()) < 8)
             {
-                $joueur->setPartie($form->getData());
+                foreach ($form->getData()->getJoueurs() as $joueur)
+                {
+                    $joueur->setPartie($form->getData());
+                }
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($partie);
+                $entityManager->flush();
             }
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($partie);
-            $entityManager->flush();
+
 
             return $this->redirectToRoute('home');
         }

@@ -26,6 +26,7 @@ class PartieType extends AbstractType
                 'entry_type' => JoueurType::class,
                 'allow_add' => true,
                 'allow_delete' => true,
+               'required' => true,
             ])
         ;
     }
