@@ -35,7 +35,7 @@ class Site
     private $codePostal;
 
     /**
-     * @ORM\OneToMany(targetEntity=Salle::class, mappedBy="idsite")
+     * @ORM\OneToMany(targetEntity=Salle::class, mappedBy="idsite", cascade={"persist"})
      */
     private $salles;
 

@@ -18,14 +18,12 @@ class SalleFixtures extends Fixture
             ->setAdresse('1 rue de test')
             ->setCodePostal('74000')
             ->setVille('Annecy')
-            ;
-        $manager->persist($site1);
+        ;
         //Salle sur Annecy
         for ($y=0; $y < 4; $y++) {
-            $salle = new Salle();
-            $salle->setIdsite($site1);
-            $manager->persist($salle);
+            $site1->addSalle(new Salle());
         }
+        $manager->persist($site1);
         //Site BonneVille
          $site2= new Site();
          $site2
