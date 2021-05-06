@@ -13,56 +13,57 @@ class SalleFixtures extends Fixture
     {
         //Site
         //Site Annecy
-        $site = new Site();
-        $site
+        $site1 = new Site();
+        $site1
             ->setAdresse('1 rue de test')
             ->setCodePostal('74000')
             ->setVille('Annecy')
             ;
-        $manager->flush($site);
+        $manager->persist($site1);
         //Salle sur Annecy
         for ($y=0; $y < 4; $y++) {
             $salle = new Salle();
-            $salle->setIdsite($site);
+            $salle->setIdsite($site1);
             $manager->persist($salle);
         }
-        $manager->flush();
         //Site BonneVille
-         $site
+         $site2= new Site();
+         $site2
             ->setAdresse('1 rue de test')
             ->setCodePostal('74130')
             ->setVille('Bonneville')
         ;
-        $manager->flush($site);
+        $manager->persist($site2);
         //Salle sur Bonneville
         for ($y=0; $y < 2; $y++) {
-            $salle->setIdsite($site);
+            $salle->setIdsite($site2);
             $manager->persist($salle);
         }
-        $manager->flush();
+
         //site Thonon
-        $site
+        $site3= new Site();
+        $site3
             ->setAdresse('1 rue de test')
             ->setCodePostal('74200')
             ->setVille('Thonon-les-Bains')
         ;
-        $manager->flush($site);
+        $manager->persist($site3);
         //Salle sur Thonon
         for ($y=0; $y < 2; $y++) {
-            $salle->setIdsite($site);
+            $salle->setIdsite($site3);
             $manager->persist($salle);
         }
-        $manager->flush();
         //site Chamonix
-        $site
+        $site4 = new Site();
+        $site4
             ->setAdresse('1 rue de test')
             ->setCodePostal('74400')
             ->setVille('Chamonix')
         ;
-        $manager->flush($site);
+        $manager->persist($site4);
         //Salle sur Chamonix
         for ($y=0; $y < 2; $y++) {
-            $salle->setIdsite($site);
+            $salle->setIdsite($site4);
             $manager->persist($salle);
         }
         $manager->flush();
