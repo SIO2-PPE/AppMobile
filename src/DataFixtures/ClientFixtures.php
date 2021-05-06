@@ -20,12 +20,12 @@ class ClientFixtures extends Fixture
     {
         $client = new Client();
         $client
-            ->setNom("Demo")
-            ->setPrenom("Demo")
+            ->setNom("Test")
+            ->setPrenom("Test")
             ->setTel("0600000000")
             ->setRoles(["ROLE_USER"])
-            ->setEmail("demo@demo")
-            ->setPassword($this->passwordEncoder->encodePassword($client, "demo"));
+            ->setEmail("test@test")
+            ->setPassword($this->passwordEncoder->encodePassword($client, "test"));
 
         $manager->persist($client);
         $manager->flush();
