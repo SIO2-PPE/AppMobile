@@ -30,14 +30,12 @@ class SalleFixtures extends Fixture
             ->setAdresse('1 rue de test')
             ->setCodePostal('74130')
             ->setVille('Bonneville')
-        ;
-        $manager->persist($site2);
+         ;
         //Salle sur Bonneville
         for ($y=0; $y < 2; $y++) {
-            $salle->setIdsite($site2);
-            $manager->persist($salle);
+            $site2->addSalle(new Salle());
         }
-
+        $manager->persist($site2);
         //site Thonon
         $site3= new Site();
         $site3
@@ -45,12 +43,11 @@ class SalleFixtures extends Fixture
             ->setCodePostal('74200')
             ->setVille('Thonon-les-Bains')
         ;
-        $manager->persist($site3);
         //Salle sur Thonon
         for ($y=0; $y < 2; $y++) {
-            $salle->setIdsite($site3);
-            $manager->persist($salle);
+            $site3->addSalle(new Salle());
         }
+        $manager->persist($site3);
         //site Chamonix
         $site4 = new Site();
         $site4
@@ -58,12 +55,11 @@ class SalleFixtures extends Fixture
             ->setCodePostal('74400')
             ->setVille('Chamonix')
         ;
-        $manager->persist($site4);
         //Salle sur Chamonix
         for ($y=0; $y < 2; $y++) {
-            $salle->setIdsite($site4);
-            $manager->persist($salle);
+            $site4->addSalle(new Salle());
         }
+        $manager->persist($site4);
         $manager->flush();
     }
 }

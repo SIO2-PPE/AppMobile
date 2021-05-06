@@ -43,7 +43,7 @@ class PartieController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            if (count($form->getData()->getJoueurs()) > 1 && count($form->getData()->getJoueurs()) < 8)
+            if (count($form->getData()->getJoueurs()) > 1 && count($form->getData()->getJoueurs()) < 7)
             {
                 foreach ($form->getData()->getJoueurs() as $joueur)
                 {
